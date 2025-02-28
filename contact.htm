@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="ImgSrc/LogoBlack.png">
+    <title>Contact Us | Snack Delight</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: url('ImgSrc/website_Background1.jpg') no-repeat center center/cover;
+            color: white;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar .logo img {
+            width: 150px;
+            height: 150px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #ff0062d9;
+        }
+        .contact-section {
+            text-align: center;
+            padding: 100px 30px 50px 30px;
+            margin-top: 100px;
+        }
+        .contact-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ff3a78a9;
+        }
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .contact-box {
+            background: rgba(255, 255, 255, 0.9);
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            width: 320px;
+            height: 200px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-box img {
+            width: 40px;
+            margin-bottom: 10px;
+        }
+        .contact-box h3 {
+            color: #7C1C3A;
+            margin-bottom: 10px;
+        }
+        .contact-box p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: #333;
+        }
+        .contact-box a {
+            color: #7C1C3A;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+        .contact-form {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 50px auto;
+            margin-top: 100px;
+            text-align: center;
+            color: black;
+        }
+        .contact-form h2 {
+            margin-bottom: 25px;
+        }
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .contact-form textarea {
+            margin-bottom: 25px;
+        }
+        .contact-form button {
+            background: #7C1C3A;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .contact-form button:hover {
+            background: #9A2045;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+            backdrop-filter: blur(50px);
+        }
+        .footer-left {
+            text-align: left;
+        }
+        .footer-center {
+            flex: 1;
+            text-align: center;
+        }
+        .footer-right {
+            text-align: right;
+        }
+        .footer-right a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.2s ease;
+        }
+        .footer-right p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+        @media screen and (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        .contact-info a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .contact-info a:hover .contact-box {
+            transform: translateY(-0px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.htm"><img src="ImgSrc/LogoBlack.png" alt="Cafe Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.htm#about">About</a></li>
+            <li><a href="menu.htm">Menu</a></li>
+            <li><a href="offers.htm">Offers</a></li>
+            <li><a href="gallery.htm">Gallery</a></li>
+            <li><a href="contact.htm">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-section">
+        <h1 class="contact-title">Get in Touch</h1>
+        
+        <div class="contact-info">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=12.966250,77.534889&travelmode=driving" target="_blank" style="text-decoration: none;">
+                <div class="contact-box">
+                    <img src="ImgSrc/MapsLogo.png" alt="Location">
+                    <h3>Visit Us</h3>
+                    <p>Vijayanagar, Bengaluru</p>
+                    <span style="color: #7C1C3A; font-weight: bold;">Get Directions</span>
+                </div>
+            </a>
+            <a href="tel:+919353340065" style="text-decoration: none;">
+                <div class="contact-box">
+                    <span style="font-size: 40px; margin-bottom: 10px;">📞</span>
+                    <h3>Call Us</h3>
+                    <p>+91 9353340065</p>
+                    <span style="color: #7C1C3A; font-weight: bold;">Call Now</span>
+                </div>
+            </a>
+            <a href="mailto:info@snackdelight.com" style="text-decoration: none;">
+                <div class="contact-box">
+                    <span style="font-size: 40px; margin-bottom: 10px;">✉️</span>
+                    <h3>Email Us</h3>
+                    <p>info@snackdelight.com</p>
+                    <span style="color: #7C1C3A; font-weight: bold;">Send Email</span>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/snackdelight.blr/" target="_blank" style="text-decoration: none;">
+                <div class="contact-box">
+                    <img src="ImgSrc/InstagramLogo.png" alt="Instagram">
+                    <h3>Follow Us</h3>
+                    <p>@snackdelight.blr</p>
+                    <span style="color: #7C1C3A; font-weight: bold;">Visit Profile</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send a Message</h2>
+            <form>
+                <input type="text" id="fullName" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="tel" id="phoneNumber" placeholder="Your Phone Number" required>
+                <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+                <button type="button" onclick="sendWhatsAppMessage()">Send via WhatsApp <img src="ImgSrc/WhatsApp.png" alt="WhatsApp" style="width: 20px; height: 20px; vertical-align: middle; margin-left: 2px;"></button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+        <div class="footer-left">
+            <p>&copy; 2025 Snack Delight</p>
+        </div>
+        <div class="footer-center">
+            <p style="margin-bottom: 15px; margin-top: 10px;">Find Us On</p>
+            <div>
+                <a href="https://maps.app.goo.gl/cFK5wBq51vhTQck1A" target="_blank"><img src="ImgSrc/MapsLogo.png" width="28" height="40" alt="Maps Logo?"></a>
+                <span style="margin: 0 10px;"></span>
+                <a href="https://www.instagram.com/snackdelight.blr/" target="_blank"><img src="ImgSrc/InstagramLogo.png" width="38" height="40" alt="Instagram Logo?"></a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p style="font-size: 0.75rem; margin: 2px 0;">22nd Main Rd,</p>
+            <p style="font-size: 0.75rem; margin: 2px 0;">Opp. to Vijayanagar Bus Depot,</p>
+            <p style="font-size: 0.75rem; margin: 2px 0;">PF Layout, Vijayanagar, Bengaluru</p>
+        </div>
+    </footer>
+
+    <script>
+        function sendWhatsAppMessage() {
+            console.log("Button clicked!");
+            // Get input values
+            const fullName = document.getElementById("fullName").value.trim();
+            const phoneNumber = document.getElementById("phoneNumber").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+    
+            // Validate fields
+            if (!fullName || !phoneNumber || !email || !message) {
+                alert("Please fill in all fields.");
+                return;
+            }
+    
+            // Construct the WhatsApp message
+            const whatsappMessage = `Hello! I have an inquiry:\n\n` +
+                `*Name:* ${fullName}\n` +
+                `*Phone:* ${phoneNumber}\n` +
+                `*Email:* ${email}\n` +
+                `*Message:* ${message}`;
+    
+            // Replace with the business owner's WhatsApp number (without spaces or special characters)
+            const ownerPhoneNumber = "9353340065"; 
+    
+            // Generate the WhatsApp link
+            const whatsappURL = `https://wa.me/${ownerPhoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    
+            // Open WhatsApp in a new tab
+            window.open(whatsappURL, "_blank");
+        }
+    </script>
+    
+</body>
+</html>

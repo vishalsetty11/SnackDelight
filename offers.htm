@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="ImgSrc/LogoBlack.png">
+    <title>Snack Delight | Special Offers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: url('ImgSrc/website_Background1.jpg') no-repeat center center/cover;
+            color: white;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar .logo img {
+            width: 150px;
+            height: 150px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin: 0 15px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #ff0062d9;
+        }
+        .offers-section {
+            text-align: center;
+            padding: 100px 30px 50px 30px;
+            margin-top: 100px;
+        }
+        .offers-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ff3a78a9;
+        }
+        .offers-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .offer-item {
+            flex: 0 1 350px;
+            text-align: center;
+        }
+        .offer-item img {
+            width: 100%;
+            max-width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: #7C1C3A;
+            color: white;
+            font-size: 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #9A2045;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+            backdrop-filter: blur(50px);
+        }
+        .footer-left {
+            text-align: left;
+        }
+        .footer-center {
+            flex: 1;
+            text-align: center;
+        }
+        .footer-right {
+            text-align: right;
+        }
+        .footer-right a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.2s ease;
+        }
+        .footer-right p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+        }
+        @media screen and (max-width: 768px) {
+            .offers-container img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.htm"><img src="ImgSrc/LogoBlack.png" alt="Cafe Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.htm#about">About</a></li>
+            <li><a href="menu.htm">Menu</a></li>
+            <li><a href="offers.htm">Offers</a></li>
+            <li><a href="gallery.htm">Gallery</a></li>
+            <li><a href="contact.htm">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="offers-section">
+        <h1 class="offers-title">Exciting Offers Just for You!</h1>
+        <div class="offers-container">
+            <div class="offer-item">
+                <img src="ImgSrc/OfferPoster1.jpg" alt="Special Offer 1">
+            </div>
+            <div class="offer-item">
+                <img src="ImgSrc/OfferPoster2.jpg" alt="Special Offer 2">
+            </div>
+            <div class="offer-item">
+                <img src="ImgSrc/OfferPoster3.jpg" alt="Special Offer 3">
+            </div>
+        </div>
+        <a href="http://zoma.to/r/21735451" class="btn" target="_self" style="margin-top: 30px; display: inline-block;">Order Now</a>
+    </section>
+
+    <footer id="footer" class="footer">
+        <div class="footer-left">
+            <p>&copy; 2025 Snack Delight</p>
+        </div>
+        <div class="footer-center">
+            <p style="margin-bottom: 15px; margin-top: 10px;">Find Us On</p>
+            <div>
+                <a href="https://maps.app.goo.gl/cFK5wBq51vhTQck1A" target="_blank"><img src="ImgSrc/MapsLogo.png" width="28" height="40" alt="Maps Logo?"></a>
+                <span style="margin: 0 10px;"></span>
+                <a href="https://www.instagram.com/snackdelight.blr/" target="_blank"><img src="ImgSrc/InstagramLogo.png" width="38" height="40" alt="Instagram Logo?"></a>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p style="font-size: 0.75rem; margin: 2px 0;">22nd Main Rd,</p>
+            <p style="font-size: 0.75rem; margin: 2px 0;">Opp. to Vijayanagar Bus Depot,</p>
+            <p style="font-size: 0.75rem; margin: 2px 0;">PF Layout, Vijayanagar, Bengaluru</p>
+        </div>
+    </footer>
+</body>
+</html>
