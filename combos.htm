@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="ImgSrc/LogoBlack.png">
-    <title>Snack Delight | Gallery</title>
+    <title>Snack Delight | Special Offers</title>
     <link rel="stylesheet" href="common-styles.css">
     <style>
         * {
@@ -57,124 +57,110 @@
         .nav-links a:hover {
             color: #ff0062d9;
         }
-        .gallery-container {
-            max-width: 90%;
-            margin: auto;
+        .offers-section {
             text-align: center;
-            padding-top: 180px !important;
+            padding: 100px 30px 50px 30px;
+            margin-top: 100px;
         }
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            color: #fff;
-            text-shadow: 2px 2px 10px #380012a9;
-            margin-top: 60px;    /* Increased top margin between sections */
-            margin-bottom: 30px;
+        .offers-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #ff3a78a9;
         }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;          /* Increased gap between grid items */
+        .offers-container {
+            display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            margin-bottom: 50px;
+            gap: 30px;
+            padding: 20px;
+            margin-bottom: 20px;
         }
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        .offer-item {
+            flex: 0 1 350px;
+            text-align: center;
         }
-        .gallery-item img {
+        .offer-item img {
             width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: transform 0.5s ease, filter 0.5s ease;
+            max-width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
-        .gallery-item:hover img {
-            transform: scale(1.1);
-            filter: brightness(80%);
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: #7C1C3A;
+            color: white;
+            font-size: 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #9A2045;
         }
         .footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
-            backdrop-filter: blur(0px);
+            padding: 5px 10px;
+            backdrop-filter: blur(50px);
+        }
+        .footer-left {
+            text-align: left;
         }
         .footer-center {
             flex: 1;
             text-align: center;
         }
-        .footer-left, .footer-right {
-            text-align: left;
-        }
         .footer-right {
             text-align: right;
         }
-        
         .footer-right a {
             text-decoration: none;
             color: white;
             transition: color 0.2s ease;
         }
-        
         .footer-right p {
             margin: 5px 0;
             font-size: 0.9rem;
+        }
+        @media screen and (max-width: 768px) {
+            .offers-container img {
+                width: 100%;
+            }
         }
 
     </style>
 </head>
 <body>
     <div class="overlay"></div>
-
+    
     <nav class="navbar">
-        <div class="logo">
+        <div class="Navlogo">
             <a href="index.htm"><img src="ImgSrc/LogoBlack.png" alt="Cafe Logo"></a>
         </div>
         <ul class="nav-links">
             <li><a href="index.htm#about">About</a></li>
             <li><a href="menu.htm">Menu</a></li>
-            <li><a href="offers.htm">Offers</a></li>
+            <li><a href="combos.htm">Combos</a></li>
             <li><a href="gallery.htm">Gallery</a></li>
             <li><a href="contact.htm">Contact</a></li>
         </ul>
     </nav>
 
-    <div class="gallery-container">
-       <!-- Burgers Section -->
-        <h2 class="section-title">🍔 Burgers</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="ImgSrc/Img2.jpg" alt="Burger"></div>
-            <div class="gallery-item"><img src="ImgSrc/Img2.jpg" alt="Burger"></div>
-            <div class="gallery-item"><img src="ImgSrc/Img2.jpg" alt="Burger"></div>
+    <section class="offers-section">
+        <h1 class="offers-title">Exciting Offers Just for You!</h1>
+        <div class="offers-container">
+            <div class="offer-item">
+                <img src="ImgSrc/Combos/COMBO STANDY 5 X 3.jpg" alt="Combo Offer 1">
+            </div>
+            <div class="offer-item">
+                <img src="ImgSrc/Combos/MENU CARD COMBO.jpg" alt="Combo Offer 2" style="height: 100%;">
+            </div>
         </div>
-
-        <!-- Sandwiches Section -->
-        <h2 class="section-title">🥪 Sandwiches</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="ImgSrc/Img2.jpg" alt="Sandwich"></div>
-            <div class="gallery-item"><img src="ImgSrc/Img2.jpg" alt="Sandwich"></div>
-            <div class="gallery-item"><img src="ImgSrc/Img2.jpg" alt="Sandwich"></div>
-        </div>
-
-        <!-- Milkshakes Section -->
-        <h2 class="section-title">🥤 Milkshakes</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="ImgSrc/Img2.jpg" alt="Milkshake"></div>
-            <div class="gallery-item"><img src="ImgSrc/Img2.jpg" alt="Milkshake"></div>
-            <div class="gallery-item"><img src="ImgSrc/Img2.jpg" alt="Milkshake"></div>
-        </div>
-
-        <!-- Fries & Snacks Section -->
-        <h2 class="section-title">🍟 Fries & Snacks</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="ImgSrc/Img2.jpg" alt="Fries"></div>
-            <div class="gallery-item"><img src="ImgSrc/Img2.jpg" alt="Fries"></div>
-            <div class="gallery-item"><img src="ImgSrc/Img2.jpg" alt="Fries"></div>
-        </div>
-    </div>
+        <a href="http://zoma.to/r/21735451" class="btn" target="_self" style="margin-top: 30px; display: inline-block;">Order Now</a>
+    </section>
 
     <footer id="footer" class="footer">
         <div class="footer-left">
@@ -194,6 +180,4 @@
             <p style="font-size: 0.75rem; margin: 2px 0;">PF Layout, Vijayanagar, Bengaluru</p>
         </div>
     </footer>
-
-</body>
 </html>

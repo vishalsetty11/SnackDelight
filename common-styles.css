@@ -1,0 +1,151 @@
+/* Desktop and common styles */
+.menu-section, .offers-section, .gallery-container, .contact-section {
+    padding-top: 180px; /* Adjusted to prevent overlap with the navbar */
+    margin-top: 0;
+    padding-bottom: 50px;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    
+}
+
+.navbar .logo img {
+    width: 150px;
+    height: 150px;
+}
+
+/* Tablet Devices (768px and below) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navbar .logo img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .nav-links {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-links li {
+        margin: 5px 10px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+        padding: 0 20px;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .contact-box {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .footer-left, .footer-right {
+        text-align: center;
+    }
+    
+    .offers-container {
+        padding: 10px;
+    }
+    
+    .offer-item {
+        flex: 0 1 100%;
+    }
+    
+    .menu-item {
+        flex: 0 1 100%;
+        margin: 10px 0;
+    }
+    
+    /* ✅ Fixed Overlapping by Increasing padding */
+    .menu-section, .offers-section, .gallery-container, .contact-section {
+        padding-top: 340px; /* Ensures no overlap with navbar */
+        margin-top: 0;
+        padding-bottom: 50px;
+    }
+}
+
+/* Mobile Devices (480px and below) */
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+    
+    .nav-links {
+        font-size: 0.9rem;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        padding: 8px;
+    }
+    
+    .gallery-grid {
+        gap: 15px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .menu-title {
+        font-size: 2rem;
+    }
+
+    /* ✅ FIXED: Consistent 340px padding for all pages */
+    .menu-section, .offers-section, .gallery-container, .contact-section {
+        padding-top: 340px; /* Increased to ensure navbar doesn't overlap */
+        margin-top: 0;
+        padding-bottom: 50px;
+    } 
+}
+
+/* For very small devices (320px and below) */
+@media screen and (max-width: 320px) {
+    .navbar .logo img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .nav-links li {
+        margin: 3px 8px;
+    }
+}
